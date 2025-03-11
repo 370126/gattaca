@@ -1,7 +1,7 @@
 ---
 ---
 
-# 370126's Website
+# About us
 
 The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.
 
@@ -11,8 +11,8 @@ The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianq
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
+A fundamental problem in evolutionary biology is how genetic variation is created and maintained. Our research focuses on this problem, although we are also interested in other issues of evolutionary genomics. Our experiments are mainly divided into two parts, molecular group and information group. The former is mainly engaged in molecular biology experiments, and the latter mainly uses computer programs to analyze sequences. In actual operation, molecules and information often penetrate and learn from each other.
+    
 {%
   include button.html
   link="research"
@@ -34,7 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+The laboratory is mainly engaged in the molecular evolution and asymmetric inheritance of plant resistance genes.
 
 {%
   include button.html
@@ -59,7 +59,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We are an inclusive group of talented students and researchers from diverse backgrounds.
 
 {%
   include button.html

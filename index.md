@@ -3,7 +3,7 @@
 
 # 370126's Website
 
-An engaging 1-3 sentence description of your lab.
+The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.
 
 {% include section.html %}
 

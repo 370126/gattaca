@@ -8,8 +8,8 @@ proofer: false
 
 # site social media and other links
 links:
-  Phone:   025-89686406
-  Address: Life Science Building B417-420, Nanjing University Xianlin Campus
+  phone:   025-89686406
+  address: Life Science Building B417-420, Nanjing University Xianlin Campus
 
 
 ### jekyll settings

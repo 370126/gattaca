@@ -26,7 +26,7 @@ A fundamental problem in evolutionary biology is how genetic variation is create
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/research.PNG"
   link="research"
   title="Our Research"
   text=text
@@ -49,7 +49,7 @@ The laboratory is mainly engaged in the molecular evolution and asymmetric inher
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/project.png"
   link="projects"
   title="Our Projects"
   flip=true
@@ -74,7 +74,7 @@ We are an inclusive group of talented students and researchers from diverse back
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/team.jpg"
   link="team"
   title="Our Team"
   text=text

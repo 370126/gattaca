@@ -1,7 +1,4 @@
----
----
-
-.background {
+--- --- .background {
   position: relative;
   background: var(--background);
   color: var(--text);

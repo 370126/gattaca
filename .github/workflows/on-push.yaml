@@ -3,8 +3,8 @@ run-name: on push to main
 
 on:
   push:
-    branches:
-      - main
+    branches-ignore:  # 允许所有分支，排除特定分支（可选）
+      - gh-pages
 
   # run if user manually requests it
   workflow_dispatch:

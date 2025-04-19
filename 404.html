@@ -294,8 +294,6 @@
 
   <link href="/lab-website/_styles/dist/background.css" rel="stylesheet">
 
-  <link href="/lab-website/_styles/dist/dynamic-background.css" rel="stylesheet">
-
 
   <!-- third party scripts -->
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
@@ -309,11 +307,13 @@
 
   <script src="/lab-website/_scripts/dark-mode.js"></script>
 
-  <script src="/lab-website/_scripts/dist/dynamic-background.dev.js"></script>
+  <script src="/lab-website/_scripts/dist/header-canvas.dev.js"></script>
 
-  <script src="/lab-website/_scripts/dynamic-background.js"></script>
+  <script src="/lab-website/_scripts/dist/header-interaction.dev.js"></script>
 
   <script src="/lab-website/_scripts/fetch-tags.js"></script>
+
+  <script src="/lab-website/_scripts/header-canvas.js"></script>
 
   <script src="/lab-website/_scripts/search.js"></script>
 
@@ -335,16 +335,9 @@
 
 
 
-
-<!-- 动态背景容器 -->
-
-  <!-- 保留原有静态背景（兼容性回退） -->
-  <div class="background" style="--image: url('')"></div>
-
-
-<!-- 原有的 <header> 标签内容保持不变 -->
-<header class="background" data-dark="true">
-
+<header class="background" style="--image: url('')" data-dark="true">
+<div class="header-background"></div>
+<canvas id="header-canvas"></canvas>
   <a href="/lab-website/" class="home">
     
       <span class="logo">
@@ -464,7 +457,7 @@
     
 
 
-<footer class="background" style="--image: url('')" data-dark="true" data-size="wide">
+<footer class="background" style="--image: url('/lab-website/images/background.jpg')" data-dark="true" data-size="wide">
   <!--
     <div>
       Extra details like contact info or address
@@ -497,21 +490,6 @@
   <div class="button-wrapper">
     <a class="button" href="/lab-website/Life%20Science%20Building%20B417-420,%20Nanjing%20University%20Xianlin%20Campus" data-tooltip="Address" data-style="bare" aria-label="Address">
       <i class="icon fa-solid fa-map-location-dot"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="/lab-website/true" data-style="bare" aria-label="button">
-      
       
     </a>
   </div>

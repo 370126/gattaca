@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const canvas = document.getElementById('header-canvas');
   const ctx = canvas.getContext('2d');
 
-  // Set canvas size to match header
+  // —— 1. 画布自适应 —— 
   function resizeCanvas() {
     canvas.width = header.offsetWidth;
     canvas.height = header.offsetHeight;
@@ -11,119 +11,90 @@ document.addEventListener('DOMContentLoaded', function() {
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
-  // Constants
-  const bases = ['A', 'T', 'G', 'C'];
-  const colors = { 'A': '#66FF66', 'T': '#FF6666', 'G': '#6666FF', 'C': '#FFFF66' }; // Softer colors
-  const sequenceCount = 20;
-  const maxLength = 10;
-  const mutationRate = 0.0001; // Slower mutation rate
-  const growthRate = 0.0005; // Slower growth rate
-  let mouseX = null;
-  let mouseY = null;
-
-  // Sequence class representing an evolving ATGC strand
-  class Sequence {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.vx = (Math.random() - 0.5) * 1;
-      this.vy = (Math.random() - 0.5) * 1;
-      this.strand = [bases[Math.floor(Math.random() * 4)]];
-      this.fitness = Math.random(); // Affects growth and survival
-    }
-
-    update() {
-      // Move sequence
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-      if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-      // Mouse-driven selection
-      if (mouseX !== null && mouseY !== null) {
-        const dx = mouseX - this.x;
-        const dy = mouseY - this.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 100) {
-          this.fitness += 0.02; // Selection pressure increases fitness
-          this.vx += (dx / distance) * 0.05;
-          this.vy += (dy / distance) * 0.05;
-        }
-      }
-
-      // Growth
-      if (this.strand.length < maxLength && Math.random() < growthRate * this.fitness) {
-        this.strand.push(bases[Math.floor(Math.random() * 4)]);
-      }
-
-      // Mutation
-      this.strand.forEach((base, i) => {
-        if (Math.random() < mutationRate) {
-          this.strand[i] = bases[Math.floor(Math.random() * 4)];
-          this.fitness = Math.max(0, Math.min(1, this.fitness + (Math.random() - 0.5) * 0.1));
-        }
-      });
-    }
-
-    draw() {
-      const baseSize = 8; // Smaller size
-      ctx.save();
-      ctx.translate(this.x, this.y);
-      this.strand.forEach((base, i) => {
-        // Draw base letter
-        ctx.fillStyle = colors[base];
-        ctx.font = 'bold 12px Arial';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(base, i * baseSize * 1.2, 0);
-    
-        // Draw backbone line
-        if (i > 0) {
-          ctx.beginPath();
-          ctx.moveTo((i - 1) * baseSize * 1.2, 0);
-          ctx.lineTo(i * baseSize * 1.2, 0);
-          ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      });
-      ctx.restore();
-    }
+  // —— 2. 演化波纹系统 —— 
+  const waveCount = 5;               // 波纹条数
+  const waves = [];
+  for (let i = 0; i < waveCount; i++) {
+    waves.push({
+      amplitude: 10 + Math.random() * 20,         // 振幅
+      frequency: 0.005 + Math.random() * 0.005,   // 频率
+      phase: Math.random() * Math.PI * 2,         // 初相位
+      // **把基础速度提到 0.005–0.01 之间，原来是 0.002–0.005**
+      speed: 0.005 + Math.random() * 0.005,       
+      yOffset: canvas.height * (0.2 + 0.6 * (i / (waveCount - 1))),
+      color: `rgba(180,200,255,${0.05 + i * 0.02})`
+    });
   }
 
-  // Initialize sequences
-  const sequences = [];
-  for (let i = 0; i < sequenceCount; i++) {
-    sequences.push(new Sequence());
-  }
-
-  // Mouse interaction
-  header.addEventListener('mousemove', (e) => {
+  let mouseX = 0;
+  header.addEventListener('mousemove', e => {
     const rect = header.getBoundingClientRect();
-    mouseX = e.clientX - rect.left;
-    mouseY = e.clientY - rect.top;
+    mouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1; // -1 … +1
   });
-  header.addEventListener('mouseleave', () => {
-    mouseX = null;
-    mouseY = null;
-  });
+  header.addEventListener('mouseleave', () => { mouseX = 0; });
 
-  // Animation loop
+  function drawWaves() {
+    waves.forEach(w => {
+      // **在相位更新里把 mouseX 的影响也加大到 0.002**
+      w.phase += w.speed + mouseX * 0.002;
+      ctx.beginPath();
+      ctx.strokeStyle = w.color;
+      ctx.lineWidth = 1;
+      for (let x = 0; x <= canvas.width; x += 10) {
+        const y = w.yOffset + Math.sin(x * w.frequency + w.phase) * w.amplitude;
+        if (x === 0) ctx.moveTo(x, y);
+        else        ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    });
+  }
+
+  // —— 3. DNA 双螺旋系统（保持不变） —— 
+  const helix = { segments:100, r:50, pitch:6,
+                  baseSpeed:0.002, interact:0.025, phase:0 };
+  function project(x, y, z) {
+    const fov = 300, s = fov / (fov + z);
+    return { x:canvas.width/2 + x*s, y:canvas.height/2 + y*s };
+  }
+
+  function drawHelix() {
+    helix.phase += helix.baseSpeed + mouseX * helix.interact;
+    const p1 = [], p2 = [];
+    for (let i = 0; i < helix.segments; i++) {
+      const t = (i / helix.segments) * Math.PI * 4 + helix.phase;
+      const y = (i - helix.segments/2) * helix.pitch;
+      p1.push({ x:helix.r * Math.cos(t), y, z:helix.r * Math.sin(t) });
+      p2.push({ x:helix.r * Math.cos(t + Math.PI), y, z:helix.r * Math.sin(t + Math.PI) });
+    }
+    // 碱基对
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(200,200,200,0.3)';
+    for (let i = 0; i < helix.segments; i += 5) {
+      const a = project(p1[i].x, p1[i].y, p1[i].z);
+      const b = project(p2[i].x, p2[i].y, p2[i].z);
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+    }
+    // 主链
+    [p1, p2].forEach(pts => {
+      ctx.beginPath();
+      pts.forEach((pt, i) => {
+        const v = project(pt.x, pt.y, pt.z);
+        i === 0 ? ctx.moveTo(v.x, v.y) : ctx.lineTo(v.x, v.y);
+      });
+      ctx.strokeStyle = 'rgba(150,150,255,0.6)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    });
+  }
+
+  // —— 4. 动画循环 —— 
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Update and draw sequences
-    sequences.forEach((seq, index) => {
-      seq.update();
-      seq.draw();
-
-      // Evolutionary pruning: low fitness sequences may "die"
-      if (seq.fitness < 0.1 && Math.random() < 0.01) { // Increased pruning rate
-        sequences.splice(index, 1);
-        sequences.push(new Sequence()); // Replace with a new sequence
-      }
-    });
-
+    drawWaves();
+    drawHelix();
     requestAnimationFrame(animate);
   }
   animate();

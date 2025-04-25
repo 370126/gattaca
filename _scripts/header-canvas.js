@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // —— 3. DNA 双螺旋系统（保持不变） —— 
   const helix = { segments:100, r:50, pitch:6,
-                  baseSpeed:0.002, interact:0.025, phase:0 };
+                  baseSpeed:0.002, interact:0.01, phase:0 };
   function project(x, y, z) {
     const fov = 300, s = fov / (fov + z);
     return { x:canvas.width/2 + x*s, y:canvas.height/2 + y*s };

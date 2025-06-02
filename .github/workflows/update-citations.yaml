@@ -59,6 +59,7 @@ jobs:
         if: github.event.action != 'closed'
         run: python _cite/cite.py
         timeout-minutes: 15
+        continue-on-error: true # 即使manuboot失败也继续执行后续步骤
 
       - name: Commit cache
         if: failure()

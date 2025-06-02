@@ -1,7 +1,7 @@
 ---
 name: Tim Member
-image: images/team/some-image.jpg
-role: programmer
+image: images/members/head.jpg
+role: master
 description: Senior Programmer
 aliases:
   - T Member

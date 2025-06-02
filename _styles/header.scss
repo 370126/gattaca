@@ -125,13 +125,16 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  /* 增加导航项之间的间隔 */
+  gap: 20px; /* 从 10px 增加到 20px */
   font-family: var(--heading);
   text-transform: uppercase;
 }
 
 nav > a {
   padding: 5px;
+  /* 增加导航项字体大小 */
+  font-size: 1.1em; /* 增加字体大小 */
 }
 
 nav > a:hover {
@@ -154,6 +157,8 @@ header:not([data-big]) {
       align-items: flex-end;
       flex-direction: column;
       width: 100%;
+      /* 手机模式下间隔 */
+      gap: 15px; /* 可以调整这个值 */
     }
   }
 }
@@ -190,5 +195,55 @@ header[data-big] {
 
   .subtitle {
     font-size: var(--large);
+  }
+}
+
+
+/* 语言切换器容器 */
+.language-switcher {
+  position: static;
+  transform: none;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  z-index: auto;
+  
+  display: flex;
+  align-items: center;
+  
+  /* 增加语言切换器与旁边导航项的距离 */
+  margin-left: 40px; /* 从 20px 增加到 40px，使其更远 */
+}
+
+/* 语言切换按钮的基础样式 */
+.language-switcher .lang-button {
+  display: inline-block;
+  padding: 8px 12px;
+  border: none; /* <-- 修改点：移除边框 */
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2); /* 柔和的半透明背景 */
+  color: #f0f0f0; /* 柔和的文本颜色 */
+  text-align: center;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    /* 移除悬停时的边框颜色变化 */
+    // border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+    box-shadow: none;
   }
 }

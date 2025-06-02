@@ -16,11 +16,19 @@
   -->
 
   <div>
-    {% for link in site.links %}
-      {% assign key = link[0] %}
-      {% assign value = link[1] %}
-      {% include button.html type=key text="" link=value style="bare" %}
-    {% endfor %}
+    
+    {% if site.links.phone %}
+      {% assign phone_link_url = "tel:" | append: site.links.phone %}
+      {% include button.html type="phone" text="" link=phone_link_url style="bare" %}
+    {% endif %}    
+    {% if site.links.map_url_amap %}
+      {% include button.html type="address" text="" link=site.links.map_url_amap style="bare" %}<br>
+    {% endif %}
+
+    {% if site.links.address %}
+      <span>{{ site.links.address }}</span><br>
+    {% endif %}
+
   </div>
 
   <div>

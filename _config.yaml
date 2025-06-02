@@ -1,17 +1,20 @@
 # site properties and page defaults
 title: GATTACA Lab
-subtitle: School of Life Sciences, Nanjing University
-description: The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.
-# header: images/background_ori.jpg
+# subtitle: School of Life Sciences, Nanjing University
+# description: The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.
+header: images/background_ori.jpg
 footer: images/background.jpg
 proofer: false
 
+show-title: true # <-- 确保这个存在，如果需要控制标题显示
+show-subtitle: true # <-- 确保这个存在，如果需要控制副标题显示
+
 # site social media and other links
 links:
-  phone:   025-89686406
+  # email:   025-89686406
   address: Life Science Building B417-420, Nanjing University Xianlin Campus
-
-
+  map_url_amap: http://api.map.baidu.com/place/detail?uid=7b259e1c19ce6dff5cd4fea1&output=html&src=webapp.baidu.openAPIdemo 
+  phone: 025-89686406
 ### jekyll settings
 
 # front matter defaults
@@ -47,6 +50,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-feed
   - jekyll-last-modified-at
+  - jekyll-multiple-languages-plugin
 
 # code block syntax highlighting
 highlighter: rouge
@@ -68,3 +72,17 @@ exclude:
   - README.md
   - LICENSE.md
   - CITATION.cff
+
+# 多语言插件配置
+languages: ["en", "zh"] # 定义支持的语言，"en" 是默认语言
+default_locale_in_subfolder: false # false 意味着英文页面在根目录，中文在 /zh/
+# 排除不需要翻译的目录
+exclude_from_localizations:
+  - images
+  - _scripts
+  - _styles
+  - _data # 如果 _data 目录下的文件不需要翻译
+  - _layouts # 如果 _layouts 目录下的文件不需要翻译
+  - _cite
+  - _plugins
+  - _members

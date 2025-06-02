@@ -1,0 +1,40 @@
+titles:
+  about_us: About us
+  our_research: Our Research
+  our_projects: Our Projects
+  our_team: Our Team
+
+buttons:
+  see_publications: See our publications
+  browse_projects: Browse our projects
+  meet_team: Meet our team
+
+blog:
+  title: Blog
+  tooltip: Read our latest updates
+  
+contact:
+  title: Contact Us
+  tooltip: Get in touch with us
+
+projects:
+  title: Projects
+  featured: Featured
+  more: More
+  tooltip: Explore our projects
+research:
+  title: Research
+  highlighted: Highlighted
+  all: All
+  tooltip: Published works
+
+team:
+  title: Team
+  tooltip: Meet our team
+
+site_config:
+  subtitle: School of Life Sciences, Nanjing University
+  description: The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.
+
+
+tooltip: Software, datasets, and more

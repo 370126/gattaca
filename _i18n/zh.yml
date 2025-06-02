@@ -1,0 +1,40 @@
+titles:
+  about_us: 关于我们
+  our_research: 我们的研究
+  our_projects: 我们的项目
+  our_team: 我们的团队
+
+buttons:
+  see_publications: 查看我们的出版物
+  browse_projects: 浏览我们的项目
+  meet_team: 认识我们的团队
+
+blog:
+  title: 博客
+  tooltip: 最新动态
+
+contact:
+  title: 联系我们
+  tooltip: 与我们联系
+projects:
+  title: 项目
+  featured: 精选项目
+  more: 更多项目
+  tooltip: 探索我们的项目
+
+research:
+  title: 研究
+  highlighted: 突出研究
+  all: 所有研究
+  tooltip: 出版论文
+  
+team:
+  title: 团队
+  tooltip: 我们的团队
+
+site_config:
+  subtitle: 南京大学生命科学学院
+  description: Gattaca实验室成立于2003年，由田大成教授和陈建群教授创立，起源于南京大学分子生物学与生态学组的工作，并建立在其他学科教师成员在生物信息学和计算机科学等领域的开创性工作之上。
+
+
+tooltip: Software, datasets, and more

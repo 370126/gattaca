@@ -7,38 +7,72 @@
   {% assign title = nil %}
 {% endif %}
 
-{% assign title = title | xml_escape %}
 
-{% assign fulltitle = "" | split: "," %}
-{% if title and title != "" %}
-  {% assign fulltitle = fulltitle | push: title %}
+{% assign page_display_title = title | xml_escape %} 
+
+
+
+{% assign fulltitle = site.title | xml_escape %}
+
+
+{% assign translated_subtitle = "" %}
+{% if site.show-subtitle != false %} 
+  {% assign translated_subtitle = site_props.subtitle | t %} 
 {% endif %}
-{% if site.title and site.title != "" %}
-  {% assign fulltitle = fulltitle | push: site.title %}
-{% endif %}
-{% assign fulltitle = fulltitle | join: " | " %}
 
-{% assign subtitle = site.subtitle %}
 
-{% assign description = page.description | default: site.description %}
-{% if site.subtitle %}
-  {% capture description -%}
-    {{ site.subtitle }}. {{ description }}
+{% assign translated_description = page.description | default: site_props.description | t %} 
+{% if translated_subtitle and translated_subtitle != "" %} 
+  {% capture translated_description -%}
+    {{ translated_subtitle }}. {{ translated_description }}
   {%- endcapture %}
 {% endif %}
 {% capture url -%}
   {{ site.url }}{{ site.baseurl }}
 {%- endcapture %}
 
-{% assign description = description | xml_escape %}
+{% assign final_description = translated_description | xml_escape %} 
 
-{% assign png = "images/icon.png" | file_exists %}
-{% assign jpg = "images/icon.jpg" | file_exists %}
-{% assign icon = png | default: jpg | relative_url %}
 
-{% assign jpg = "images/share.jpg" | file_exists %}
-{% assign png = "images/share.png" | file_exists %}
-{% assign share = jpg | default: png | relative_url %}
+{% assign png_icon_fs_path = "images/icon.png" | file_exists %}
+{% assign jpg_icon_fs_path = "images/icon.jpg" | file_exists %}
+
+{% assign found_icon_fs_path = nil %}
+{% if png_icon_fs_path %}
+  {% assign found_icon_fs_path = png_icon_fs_path %}
+{% elsif jpg_icon_fs_path %}
+  {% assign found_icon_fs_path = jpg_icon_fs_path %}
+{% endif %}
+
+{% assign icon_absolute_url = nil %}
+{% if found_icon_fs_path %}
+  
+  {% assign icon_relative_web_path = found_icon_fs_path | replace: site.source, "" %}
+  
+  {% assign icon_absolute_url = icon_relative_web_path | prepend: site.baseurl_root %}
+{% endif %}
+
+
+
+{% assign jpg_share_fs_path = "images/share.jpg" | file_exists %}
+{% assign png_share_fs_path = "images/share.png" | file_exists %}
+
+{% assign found_share_fs_path = nil %}
+{% if jpg_share_fs_path %}
+  {% assign found_share_fs_path = jpg_share_fs_path %}
+{% elsif png_share_fs_path %}
+  {% assign found_share_fs_path = png_share_fs_path %}
+{% endif %}
+
+{% assign share_absolute_url = nil %}
+{% if found_share_fs_path %}
+  
+  {% assign share_relative_web_path = found_share_fs_path | replace: site.source, "" %}
+  
+  {% assign share_absolute_url = share_relative_web_path | prepend: site.baseurl_root %}
+{% endif %}
+
+
 
 {% assign published = page.date | date_to_xmlschema %}
 {% assign updated = page.last_modified_at | date_to_xmlschema %}
@@ -49,23 +83,23 @@
 
 <title>{{ fulltitle }}</title>
 
-<link rel="icon" href="{{ icon }}">
+<link rel="icon" href="{{ icon_absolute_url }}"> 
 
-<meta name="title" content="{{ title }}">
-<meta name="description" content="{{ description }}">
+<meta name="title" content="{{ page_display_title }}">
+<meta name="description" content="{{ final_description }}">
 
-<meta property="og:title" content="{{ title }}">
+<meta property="og:title" content="{{ page_display_title }}">
 <meta property="og:site_title" content="{{ site.title | xml_escape }}">
-<meta property="og:description" content="{{ description }}">
+<meta property="og:description" content="{{ final_description }}">
 <meta property="og:url" content="{{ url }}">
-<meta property="og:image" content="{{ share }}">
-<meta property="og:locale" content="en_US">
+<meta property="og:image" content="{{ share_absolute_url }}"> 
+<meta property="og:locale" content="{{ site.lang }}_{{ site.lang | upcase }}">
 
-<meta property="twitter:title" content="{{ title }}">
-<meta property="twitter:description" content="{{ description }}">
+<meta property="twitter:title" content="{{ page_display_title }}">
+<meta property="twitter:description" content="{{ final_description }}">
 <meta property="twitter:url" content="{{ url }}">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="{{ share }}">
+<meta property="twitter:image" content="{{ share_absolute_url }}"> 
 
 {% if page.author %}
   <meta name="author" content="{{ page.author | xml_escape }}">
@@ -83,18 +117,18 @@
     "@context": "https://schema.org",
     {% if page.author %}
       "@type": "BlogPosting",
-      "author": { "@type": "Person", "name": "{{ title }}" },
+      "author": { "@type": "Person", "name": "{{ page_display_title }}" },
       "datePublished": "{{ published }}",
       "dateModified": "{{ updated }}",
     {% else %}
       "@type": "WebSite",
     {% endif %}
-    "name": "{{ title }}",
-    "description": "{{ description }}",
-    "headline": "{{ title }}",
+    "name": "{{ page_display_title }}",
+    "description": "{{ final_description }}",
+    "headline": "{{ page_display_title }}",
     "publisher": {
       "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "{{ icon }}" }
+      "logo": { "@type": "ImageObject", "url": "{{ icon_absolute_url }}" } 
     },
     "url": "{{ url }}"
   }

@@ -1,23 +1,1056 @@
-- id: doi:10.1371/journal.pcbi.1007128
-  type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
-  tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
+# _data/sources.yaml
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+# 这个文件是 Manubot 引用系统的输入。
+# DO NOT MANUALLY EDIT _data/citations.yaml，它是由 cite process 自动生成的。
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+# --- 期刊文章 (包含 DOI) ---
+# Manubot 将自动获取这些 DOI 的详细信息。
+# 您可以添加额外字段（如 title, authors 等）进行手动覆盖，如果 Manubot 获取的信息不准确。
+
+- id: doi:10.1093/molbev/msab286 # Ren Y, He Z, Liu P, Traw MB, Sun S, Tian D, Yang S, Jia Y*, Wang L* (2021)
+- id: doi:10.1111/tpj.15516 # Yu L, Ma S, Zhang X, Tian D, Yang S*, Jia X*, Traw MB* (2021)
+- id: doi:10.1111/tpj.14154 # Jia X, Zhang Y, Zhang Q, Zhao Q, Wang L, Traw M, Tian D, Wang C*, Yang S*. (2019)
+- id: doi:10.1104/pp.19.00328 # Chen X, Tian X, Xue L, Zhang X, Yang S, Traw MB & Huang J*. (2019)
+- id: doi:10.1038/s41477-018-0323-6 # Chen J, Hao Z, Guang X, Zhao C, Wang P, Xue L, Zhu Q, Yang L, Yu Sheng1 , Zhou Y, Xu H, Xie H, Long X, Zhang J, Wang Z, Shi M, Lu Y, Liu S, Guan L, Zhu Q, Yang L, Ge S , Cheng T, Laux T, Gao Q, Peng Y, Liu N*, Yang S*, Shi J* (2019)
+- id: doi:10.1073/pnas.1910229116 # Wang L, Zhao L, Zhang X, Zhang Q, Jia Y, Wang G, Li S, Tian D, Li W-H* & Yang S*. (2019)
+- id: doi:10.1186/s13059-020-02060-w # Wang L, Sun Y, Sun X, Yu L, Xue L, He Z, Huang J, Tian D, Hurst LD* & Yang S* (2020)
+- id: doi:10.1016/j.jplph.2020.153141 # Jia X, Yu L, Tang M, Tian D, Yang S, Zhang X* & Traw MB* (2020)
+
+# --- 期刊文章 (手动输入，无 DOI 或 Manubot 无法识别) ---
+# 对于这些条目，必须手动提供所有详细信息。
+
+- id: manual-wang-2023-reevaluating # 自定义 ID
+  title: "Re-evaluating evidence for adaptive mutation rate variation"
+  authors:
+    - "Wang L"
+    - "Ho AT"
+    - "Hurst LD"
+    - "Yang S"
+  publisher: "Nature"
+  date: "2023-01-01" # 默认设置为该年的第一天
+  type: journal-article # 定义类型，可参照 _data/types.yaml
+
+- id: manual-jia-2022-rice-splice
+  title: "In rice splice variants that restore the reading frame after frameshifting indel introduction are common, often induced by the indels and sometimes lead to organism-level rescue"
+  authors:
+    - "Jia Y"
+    - "Qin C"
+    - "Traw MB"
+    - "Chen X"
+    - "He Y"
+    - "Kai J"
+    - "Yang S"
+    - "Wang L"
+    - "Hurst LD"
+  publisher: "PLOS Genetics"
+  date: "2022-01-01"
+  type: journal-article
+
+- id: manual-jia-2021-mitotic-gene
+  title: "Mitotic gene conversion can be as important as meiotic conversion in driving genetic variability in plants and other species without early germline segregation"
+  authors:
+    - "Jia X"
+    - "Zhang Q"
+    - "Jiang M"
+    - "Huang J"
+    - "Yu L"
+    - "Traw MB"
+    - "Tian D"
+    - "Hurst LD"
+    - "Yang S"
+  publisher: "PLoS Biol"
+  date: "2021-01-01"
+  type: journal-article
+
+- id: manual-jiang-2020-crispr-based
+  title: "CRISPR-based assessment of genomic structure in the conserved SQUAMOSA promoter-binding-like gene clusters in rice"
+  authors:
+    - "Jiang M"
+    - "He Y"
+    - "Chen X"
+    - "Zhang X"
+    - "Guo Y"
+    - "Yang S"
+    - "Huang J"
+    - "Traw M"
+  publisher: "Plant J"
+  date: "2020-01-01"
+  type: journal-article
+
+- id: manual-chen-2019-architecture
+  title: "The architecture of intra-organism mutation rate variation in plants"
+  authors:
+    - "Wang L"
+    - "Ji Y"
+    - "Hu Y"
+    - "Hu H"
+    - "Jia X"
+    - "Jiang M"
+    - "Zhang X"
+    - "Zhao L"
+    - "Zhang Y"
+    - "Jia Y"
+    - "Qin C"
+    - "Yu L"
+    - "Huang J"
+    - "Yang S"
+    - "Hurst LD"
+    - "Tian D"
+  publisher: "PLOS Biology"
+  date: "2019-01-01"
+  type: journal-article
+
+- id: manual-huang-2018-identifying
+  title: "Identifying a Large Number of High-Yield Genes in Rice by Pedigree Analysis, Whole-Genome Sequencing, and CRISPR-Cas9 Gene Knockout"
+  authors:
+    - "Huang J"
+    - "Li J"
+    - "Zhou J"
+    - "Wang L"
+    - "Yang S"
+    - "Hurst LD"
+    - "Li W-H"
+    - "Tian D"
+  publisher: "PNAS"
+  date: "2018-01-01"
+  type: journal-article
+
+- id: manual-liu-2018-tetrad-analysis
+  title: "Tetrad Analysis in Plants and Fungi Finds Large Differences in Gene Conversion Rates but No GC Bias"
+  authors:
+    - "Liu H"
+    - "Huang J"
+    - "Sun X"
+    - "Li J"
+    - "Hu Y"
+    - "Yu L"
+    - "Liti G"
+    - "Tian D"
+    - "Hurst LD"
+    - "Yang S"
+  publisher: "Nature Ecology & Evolution"
+  date: "2018-01-01"
+  type: journal-article
+
+- id: manual-liu-2017-direct-determination
+  title: "Direct determination of the mutation rate in the bumblebee reveals evidence for weak recombination-associated mutation and an approximate rate constancy in insects"
+  authors:
+    - "Liu H"
+    - "Jia Y"
+    - "Sun X"
+    - "Tian D"
+    - "Hurst LD"
+    - "Yang S"
+  publisher: "Mol Biol Evol"
+  date: "2017-01-01"
+  type: journal-article
+
+- id: manual-gu-2016-dissimilar-manifestation
+  title: "Dissimilar Manifestation of Heterosis in Super Hybrid Rice at Early-Tillering Stage under Nutrient-Deficient and Nutrient-Sufficient Condition"
+  authors:
+    - "Gu L"
+    - "Wu Y"
+    - "Jiang M"
+    - "Si W"
+    - "Zhang X"
+    - "Tian D"
+    - "Yang S"
+  publisher: "Plant Physiol"
+  date: "2016-01-01"
+  type: journal-article
+
+- id: manual-xie-2016-mutation-rate-peach-i
+  title: "Mutation rate analysis via parent-progeny sequencing of the perennial peach I. A low rate in woody perennials and a higher mutagenicity in hybrids"
+  authors:
+    - "Xie Z"
+    - "Wang L"
+    - "Wang L"
+    - "Wang Z"
+    - "Lu Z"
+    - "Tian D"
+    - "Yang S"
+    - "Hurst LD"
+  publisher: "P Roy Soc B-Biol Sci"
+  date: "2016-01-01"
+  type: journal-article
+
+- id: manual-wang-2016-mutation-rate-peach-ii
+  title: "Mutation rate analysis via parent-progeny sequencing of the perennial peach II: No evidence for recombination-associated mutation"
+  authors:
+    - "Wang L"
+    - "Zhang Y"
+    - "Qing C"
+    - "Tian D"
+    - "Yang S"
+    - "Hurst LD"
+  publisher: "P Roy Soc B-Biol Sci"
+  date: "2016-01-01"
+  type: journal-article
+
+- id: manual-yang-2015-higher-mutation-rates
+  title: "Parent-progeny sequencing indicates higher mutation rates in heterozygotes"
+  authors:
+    - "Yang S"
+    - "Wang L"
+    - "Huang J"
+    - "Zhang X"
+    - "Yuan Y"
+    - "Chen J-Q"
+    - "Hurst LD"
+    - "Tian D"
+  publisher: "Nature"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-zhang-2015-rice-blast-r-genes
+  title: "A genome-wide survey reveals abundant rice blast R-genes in resistant cultivars"
+  authors:
+    - "Zhang X"
+    - "Yang S"
+    - "Wang J"
+    - "Jia Y"
+    - "Huang J"
+    - "Zhong Y"
+    - "Tan S"
+    - "Wang L"
+    - "Gu L"
+    - "Chen JQ"
+    - "Pan QH"
+    - "Bergelson J"
+    - "Tian D"
+  publisher: "Plant J"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-liu-2015-gene-conversion-honeybee
+  title: "Causes and consequences of crossing-over evidenced via a high-resolution recombinational landscape of the honey bee"
+  authors:
+    - "Liu H"
+    - "Zhang X"
+    - "Huang J"
+    - "Chen JQ"
+    - "Tian D"
+    - "Hurst LD"
+    - "Yang S"
+  publisher: "Genome Biology"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-si-2015-widely-distributed-hot-spots
+  title: "Widely distributed hot and cold spots in meiotic recombination as shown by sequencing of rice F2 plants"
+  authors:
+    - "Si W"
+    - "Yuan Y"
+    - "Huang J"
+    - "Zhang X"
+    - "Zhang Y"
+    - "Zhang Y"
+    - "Tian D"
+    - "Wang C"
+    - "Yang YH"
+    - "Yang S"
+  publisher: "New Phytologist"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-yang-2013-rapidly-evolving-r-genes
+  title: "Rapidly evolving R genes in diverse grass species confer resistance to rice blast disease"
+  authors:
+    - "Yang S"
+    - "Li J"
+    - "Zhang X"
+    - "Zhang Q"
+    - "Huang J"
+    - "Chen J-Q"
+    - "Hartl DL"
+    - "Tian D"
+  publisher: "PNAS"
+  date: "2013-01-01"
+  type: journal-article
+
+- id: manual-yang-2012-gene-conversion-events
+  title: "Great majority of recombination events in Arabidopsis are gene conversion events"
+  authors:
+    - "Yang S"
+    - "Yuan Y"
+    - "Wang L"
+    - "Li J"
+    - "Wang W"
+    - "Liu H"
+    - "Chen JQ"
+    - "Hurst LD"
+    - "Tian D"
+  publisher: "PNAS"
+  date: "2012-01-01"
+  type: journal-article
+
+- id: manual-yue-2012-tracing-origin
+  title: "Tracing the origin and evolutionary history of plant nucleotide-binding site-leucine-rich repeat (NBS-LRR) genes"
+  authors:
+    - "Yue J-X"
+    - "Meyers BC"
+    - "Chen J-Q"
+    - "Tian D"
+    - "Yang S"
+  publisher: "New Phytologist"
+  date: "2012-01-01"
+  type: journal-article
+
+- id: manual-gu-2010-avoidance-repeats
+  title: "Avoidance of long mononucleotide repeats in codon pair usage"
+  authors:
+    - "Gu T"
+    - "Tan S"
+    - "Gou X"
+    - "Araki H"
+    - "Tian D"
+  publisher: "Genetics"
+  date: "2010-01-01"
+  type: journal-article
+
+- id: manual-zhu-2009-genome-wide
+  title: "Genome-wide association between insertions/deletions and the nucleotide diversity in bacteria"
+  authors:
+    - "Zhu L"
+    - "Wang Q"
+    - "Tang P"
+    - "Araki H"
+    - "Tian D"
+  publisher: "Mol Biol Evol"
+  date: "2009-01-01"
+  type: journal-article
+
+- id: manual-chen-2009-variation-ratio
+  title: "Variation in the ratio of nucleotide substitution and indel rates across genomes in mammals and bacteria"
+  authors:
+    - "Chen JQ"
+    - "Wu Y"
+    - "Yang H"
+    - "Bergelson J"
+    - "Kreitman M"
+    - "Tian D"
+  publisher: "Mol Biol Evol"
+  date: "2009-01-01"
+  type: journal-article
+
+- id: manual-tian-2008-singlenucleotide-mutation
+  title: "Single-nucleotide mutation rate increases close to indels in eukaryotes"
+  authors:
+    - "Tian D"
+    - "Wang Q"
+    - "Zhang P"
+    - "Araki H"
+    - "Yang S"
+    - "Kreitman M"
+    - "Nagylaki T"
+    - "Hudson R"
+    - "Bergelson J"
+    - "Chen JQ"
+  publisher: "Nature"
+  date: "2008-01-01"
+  type: journal-article
+
+- id: manual-sun-2008-insertion-dna
+  title: "Insertion DNA promotes ectopic recombination during meiosis in Arabidopsis"
+  authors:
+    - "Sun X"
+    - "Zhang Y"
+    - "Yang S"
+    - "Chen JQ"
+    - "Hohn B"
+    - "Tian D"
+  publisher: "Mol Biol Evol"
+  date: "2008-01-01"
+  type: journal-article
+
+- id: manual-arakai-2006-presence-absence
+  title: "Presence/absence polymorphism for alternative pathogenicity islands in Pseudomonas viridiflava, a pathogen of Arabidopsis"
+  authors:
+    - "Araki H"
+    - "Tian D"
+    - "Goss EM"
+    - "Jakob K"
+    - "Halldorsdottir SS"
+    - "Kreitman M"
+    - "Bergelson J"
+  publisher: "Proc Natl Acad Sci"
+  date: "2006-01-01"
+  type: journal-article
+
+- id: manual-shen-2006-unique-evolutionary-mechanism
+  title: "Unique evolutionary mechanism in R-genes under the presence/absence polymorphism in Arabidopsis thaliana"
+  authors:
+    - "Shen J"
+    - "Araki H"
+    - "Chen L"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "Genetics"
+  date: "2006-01-01"
+  type: journal-article
+
+- id: manual-tian-2003-fitness-cost
+  title: "Fitness cost of R-gene mediated resistance in Arabidopsis thaliana"
+  authors:
+    - "Tian D"
+    - "Shaw B"
+    - "Chen J"
+    - "Kreitman M"
+    - "Bergelson J"
+  publisher: "Nature"
+  date: "2003-01-01"
+  type: journal-article
+
+- id: manual-mauricio-2003-natural-selection
+  title: "Natural selection for polymorphism in the disease resistance gene RPS2 of Arabidopsis"
+  authors:
+    - "Mauricio R"
+    - "Stahl E"
+    - "Korves T"
+    - "Tian D"
+    - "Kreitman M"
+    - "Bergelson J"
+  publisher: "Genetics"
+  date: "2003-01-01"
+  type: journal-article
+
+- id: manual-tian-2002-signature-balancing
+  title: "Signature of balancing selection in Arabidopsis"
+  authors:
+    - "Tian D"
+    - "Akashi H"
+    - "Stahl E"
+    - "Bergelson J"
+    - "Kreitman M"
+  publisher: "Proc Natl Acad Sci"
+  date: "2002-01-01"
+  type: journal-article
+
+- id: manual-bergelson-2001-evolutionary-dynamics
+  title: "Evolutionary dynamics of plant R-genes"
+  authors:
+    - "Bergelson J"
+    - "Kreitman M"
+    - "Stahl E"
+    - "Tian D"
+  publisher: "Science"
+  date: "2001-01-01"
+  type: journal-article
+
+# --- 其他出版物 (手动输入) ---
+
+- id: manual-jia-2020-pleiotropic-changes
+  title: "Pleiotropic Changes Revealed by in Situ Recovery of the Semi-Dwarf Gene Sd1 in Rice"
+  authors:
+    - "Jia X"
+    - "Yu L"
+    - "Tang M"
+    - "Tian D"
+    - "Yang S"
+    - "Zhang X"
+    - "Traw MB"
+  publisher: "Journal of Plant Physiology"
+  date: "2020-01-01"
+  type: journal-article
+
+- id: manual-jiang-2019-different-knockout
+  title: "Different Knockout Genotypes of OsIAA23 in Rice Using CRISPR/Cas9 Generating Different Phenotypes"
+  authors:
+    - "Jiang M"
+    - "Hu H"
+    - "Kai J"
+    - "Traw MB"
+    - "Yang S"
+    - "Zhang X"
+  publisher: "Plant Mol Biol"
+  date: "2019-01-01"
+  type: journal-article
+
+- id: manual-zhang-2018-phylogenetic
+  title: "Phylogenetic and CRISPR/Cas9 Studies in Deciphering the Evolutionary Trajectory and Phenotypic Impacts of Rice ERECTA Genes"
+  authors:
+    - "Zhang Y"
+    - "Li S"
+    - "Xue S"
+    - "Yang S"
+    - "Huang J"
+    - "Wang L"
+  publisher: "Frontiers in Plant Science"
+  date: "2018-01-01"
+  type: journal-article
+
+- id: manual-yuan-2017-selective-sweep
+  title: "Selective Sweep with Significant Positive Selection Serves as the Driving Force for the Differentiation of Japonica and Indica Rice Cultivars"
+  authors:
+    - "Yuan Y"
+    - "Zhang Q"
+    - "Zeng S"
+    - "Gu L"
+    - "Si W"
+    - "Zhang X"
+    - "Tian D"
+    - "Yang S"
+    - "Wang L"
+  publisher: "BMC Genomics"
+  date: "2017-01-01"
+  type: journal-article
+
+- id: manual-sun-2016-insertion-dna
+  title: "Insertion DNA accelerates meiotic inerchromosomal recombination in Arabidopsis thaliana"
+  authors:
+    - "Sun XQ"
+    - "Li DH"
+    - "Xue JY"
+    - "Yang SH"
+    - "Zhang YM"
+    - "Li MM"
+    - "Hang Y"
+  publisher: "Mol Biol Evol"
+  date: "2016-01-01"
+  type: journal-article
+
+- id: manual-guo-2016-insertions-deletions
+  title: "Insertions/deletions-associated nucleotide polymorphism in Arabidopsis thaliana"
+  authors:
+    - "Guo C"
+    - "Du J"
+    - "Wang L"
+    - "Yang S"
+    - "Mauricio R"
+    - "Tian D"
+    - "Gu T"
+  publisher: "Frontiers in Plant Science"
+  date: "2016-01-01"
+  type: journal-article
+
+- id: manual-guo-2015-novel-rice-blast
+  title: "Novel rice blast resistance genes cloning from two rapidly evolving NBS-LRR gene families in rice"
+  authors:
+    - "Guo C"
+    - "Sun X"
+    - "Chen X"
+    - "Yang S"
+    - "Li J"
+    - "Wang L"
+    - "Zhang X"
+  publisher: "Plant Mol Biol"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-li-2015-gc-content
+  title: "GC-content of synonymous codons profoundly infulences amino acid usage"
+  authors:
+    - "Li J"
+    - "Zhou J"
+    - "Wu Y"
+    - "Yang S"
+    - "Tian D"
+  publisher: "G3 : Genes|Genomes|Genetics"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-zhao-2015-high-genetic-abundance
+  title: "High genetic abundance of Rpi-blb2/Mi-1.2/Cami gene family in Solanaceae"
+  authors:
+    - "Zhao L"
+    - "Zhang Q"
+    - "Gao R"
+    - "Yang S"
+    - "Liu H"
+    - "Zhang X"
+  publisher: "BMC Evol Biol"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-gu-2015-dynamic-evolution-nbs-lrr
+  title: "Dynamic evolution of NBS-LRR genes in bread wheat and its progenitors"
+  authors:
+    - "Gu L"
+    - "Si W"
+    - "Zhao L"
+    - "Yang S"
+    - "Zhang X"
+  publisher: "Mol Genet Genomics"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-jia-2015-extreme-expansion
+  title: "Extreme expansion of NBS-encoding genes in Rosaceae"
+  authors:
+    - "Jia Y"
+    - "Yuan Y"
+    - "Zhang Y"
+    - "Yang S"
+    - "Zhang X"
+  publisher: "BMC Genetics"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-xie-2015-ancient-origins
+  title: "Ancient origins and rapid evolution of RB/Rpi-blb1 locus in Solanaceae"
+  authors:
+    - "Xie Z"
+    - "Si W"
+    - "Gao R"
+    - "Zhang X"
+    - "Yang S"
+  publisher: "Mol Genet Genomics"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-liu-2015-amino-acid-usage
+  title: "Relationship between Amino Acid Usage and Amino Acid Evolution in Primates"
+  authors:
+    - "Liu H"
+    - "Xie Z"
+    - "Tan S"
+    - "Zhang X"
+    - "Yang S"
+  publisher: "Gene"
+  date: "2015-01-01"
+  type: journal-article
+
+- id: manual-huang-2014-rapid-evolution
+  title: "Rapid evolution of avirulence genes in rice blast fungus Magnaporthe oryzae"
+  authors:
+    - "Huang J"
+    - "Si W"
+    - "Deng Q"
+    - "Li P"
+    - "Yang S"
+  publisher: "BMC Genetics"
+  date: "2014-01-01"
+  type: journal-article
+
+- id: manual-wang-2014-allele-mining
+  title: "Allele-mining of rice blast resistance genes at AC134922 locus"
+  authors:
+    - "Wang D"
+    - "Guo CJ"
+    - "Huang J"
+    - "Yang S"
+    - "Tian D"
+    - "Zhang X"
+  publisher: "BBRC"
+  date: "2014-01-01"
+  type: journal-article
+
+- id: manual-zhong-2013-functional-requirements
+  title: "Functional requirements driving the gene duplication in 12 Drosophila species"
+  authors:
+    - "Zhong Y"
+    - "Jia Y"
+    - "Gao Y"
+    - "Tian D"
+    - "Yang S"
+    - "Zhang X"
+  publisher: "BMC Genomics"
+  date: "2013-01-01"
+  type: journal-article
+
+- id: manual-tan-2012-variation-presence
+  title: "Variation of presence/absence genes among Arabidopsis populations"
+  authors:
+    - "Tan S"
+    - "Zhong Y"
+    - "Hou H"
+    - "Yang S"
+    - "Tian D"
+  publisher: "BMC Evol Biol"
+  date: "2012-01-01"
+  type: journal-article
+
+- id: manual-wang-2012-genome-wide
+  title: "Genome-wide survey of pseudogenes in 80 fully re-sequenced Arabidopsis thaliana accessions"
+  authors:
+    - "Wang L"
+    - "Si W"
+    - "Yao Y"
+    - "Tian D"
+    - "Araki H"
+    - "Yang S"
+  publisher: "Plos One"
+  date: "2012-01-01"
+  type: journal-article
+
+- id: manual-wu-2012-heterogeneous-rates
+  title: "Heterogeneous evolutionary rates of Pi2/9 genes in rice lines"
+  authors:
+    - "Wu K"
+    - "Xu T"
+    - "Guo C"
+    - "Zhang X"
+    - "Yang S"
+  publisher: "BMC Genetics"
+  date: "2012-01-01"
+  type: journal-article
+
+- id: manual-li-2012-recent-duplications
+  title: "Recent duplications drive the rapid diversification of trypsin genes in 12 Drosophila"
+  authors:
+    - "Li L"
+    - "Memon S"
+    - "Fan Y"
+    - "Yang S"
+    - "Tan S"
+  publisher: "Genetica"
+  date: "2012-01-01"
+  type: journal-article
+
+- id: manual-tan-2011-adaptive-evolution
+  title: "Adaptive evolution of Xa21 homologs in gramineae"
+  authors:
+    - "Tan S"
+    - "Wang D"
+    - "Ding J"
+    - "Tian D"
+    - "Zhang XH"
+    - "Yang S"
+  publisher: "Genteica"
+  date: "2011-01-01"
+  type: journal-article
+
+- id: manual-wang-2011-unusual-signatures
+  title: "Unusual signatures of highly adaptable R-loci in closely-related Arabidopsis species"
+  authors:
+    - "Wang J"
+    - "Zhang L"
+    - "Li P"
+    - "Tian D"
+  publisher: "Gene"
+  date: "2011-01-01"
+  type: journal-article
+
+- id: manual-wang-2011-co-variation
+  title: "Co-Variation Among Major Classes of LRR-Encoding Genes in Two Pairs of Plant Species"
+  authors:
+    - "Wang J"
+    - "Tan SJ"
+    - "Zhang L"
+    - "Li P"
+    - "Tian D"
+  publisher: "J Mol Evol"
+  date: "2011-01-01"
+  type: journal-article
+
+- id: manual-wu-2011-increased-complexity
+  title: "Increased complexity of gene structure and base composition in vertebrates"
+  authors:
+    - "Wu Y"
+    - "Yuan HZ"
+    - "Tan SJ"
+    - "Chen JQ"
+    - "Tian D"
+    - "Yang HW"
+  publisher: "Journal of Genetics and Genomics"
+  date: "2011-01-01"
+  type: journal-article
+
+- id: manual-zhang-2011-rapid-copy-number
+  title: "Rapid copy number expansion and recent recruitment of domains in S-receptor kinase-like genes contribute to the origin of self-incompatibility"
+  authors:
+    - "Zhang X"
+    - "Wang L"
+    - "Yuan Y"
+    - "Tian D"
+    - "Yang S"
+  publisher: "FEBS J"
+  date: "2011-01-01"
+  type: journal-article
+
+- id: manual-zhang-2011-relative-evolutionary-rates
+  title: "Relative evolutionary rates of NBS-encoding genes revealed by soybean segmental duplication"
+  authors:
+    - "Zhang X"
+    - "Feng Y"
+    - "Chen H"
+    - "Tian D"
+    - "Yang S"
+    - "Chen J-Q"
+  publisher: "Mol Genet Genomics"
+  date: "2011-01-01"
+  type: journal-article
+
+- id: manual-yang-2010-important-role-indels
+  title: "Important role of indels in somatic mutations of human cancer genes"
+  authors:
+    - "Yang H"
+    - "Zhong Y"
+    - "Peng C"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "BMC Med Genet"
+  date: "2010-01-01"
+  type: journal-article
+
+- id: manual-yue-2010-genome-wide-investigation
+  title: "Genome-wide investigation reveals high evolutionary rates in annual plants"
+  authors:
+    - "Yue J-X"
+    - "Li J"
+    - "Wang D"
+    - "Araki H"
+    - "Tian D"
+    - "Yang S"
+  publisher: "BMC Plant Biol"
+  date: "2010-01-01"
+  type: journal-article
+
+- id: manual-li-2010-unique-pattern-number
+  title: "Unique pattern of number evolution in gramineous NBS-LRR genes"
+  authors:
+    - "Li J"
+    - "Ding J"
+    - "Zhang W"
+    - "Zhang Y"
+    - "Tang P"
+    - "Chen JQ"
+    - "Tian D"
+    - "Yang S"
+  publisher: "Mol Genet Genomics"
+  date: "2010-01-01"
+  type: journal-article
+
+- id: manual-chen-2010-strong-positive-selection
+  title: "Strong positive selection drives rapid diversification of R-genes in Arabidopsis relatives"
+  authors:
+    - "Chen Q"
+    - "Han Z"
+    - "Jiang H"
+    - "Tian D"
+    - "Yang S"
+  publisher: "J Mol Evol"
+  date: "2010-01-01"
+  type: journal-article
+
+- id: manual-tang-2010-disease-resistance-signature
+  title: "Disease resistance signature of the leucine-rich repeat receptor-like kinase genes in four plant species"
+  authors:
+    - "Tang P"
+    - "Zhang Y"
+    - "Sun X"
+    - "Tian D"
+    - "Yang S"
+    - "Ding J"
+  publisher: "Plant Sci"
+  date: "2010-01-01"
+  type: journal-article
+
+- id: manual-zhang-2009-genetic-signature
+  title: "Genetic signature of rice domestication shown by a variety of genes"
+  authors:
+    - "Zhang Y"
+    - "Wang J"
+    - "Zhang X"
+    - "Chen JQ"
+    - "Tian D"
+    - "Yang S"
+  publisher: "J Mol Evol"
+  date: "2009-01-01"
+  type: journal-article
+
+- id: manual-zhu-2009-patterns-exon-intron
+  title: "Patterns of exon-intron architecture variation of genes in eukaryotic genomes"
+  authors:
+    - "Zhu L"
+    - "Zhang Y"
+    - "Zhang W"
+    - "Yang S"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "BMC Genomics"
+  date: "2009-01-01"
+  type: journal-article
+
+- id: manual-yang-2009-evolutionary-pattern
+  title: "Evolutionary pattern of protein architecture in mammal and fruit fly genomes"
+  authors:
+    - "Yang H"
+    - "Wu Y"
+    - "Feng J"
+    - "Yang S"
+    - "Tian D"
+  publisher: "Genomics"
+  date: "2009-01-01"
+  type: journal-article
+
+- id: manual-yang-2008-genetic-variation
+  title: "Genetic variation of NBS-LRR class resistance genes in rice lines"
+  authors:
+    - "Yang S"
+    - "Gu T"
+    - "Pan C"
+    - "Feng Z"
+    - "Ding J"
+    - "Hang Y"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "Theor Appl Genet"
+  date: "2008-01-01"
+  type: journal-article
+
+- id: manual-zhang-2008-pattern-insertion
+  title: "The pattern of insertion/deletion polymorphism in Arabidopsis thaliana"
+  authors:
+    - "Zhang W"
+    - "Sun X"
+    - "Yuan H"
+    - "Araki H"
+    - "Wang J"
+    - "Tian D"
+  publisher: "Mol Genet Genomics"
+  date: "2008-01-01"
+  type: journal-article
+
+- id: manual-yang-2008-recent-duplication
+  title: "Recent duplication dominates the expansion of the NBS-encoding genes in two woody species"
+  authors:
+    - "Yang S"
+    - "Zhang X"
+    - "Yue JX"
+    - "Tian D"
+    - "Chen JQ"
+  publisher: "Mol Genet Genomics"
+  date: "2008-01-01"
+  type: journal-article
+
+- id: manual-du-2008-grouped-nucleotide
+  title: "Grouped nucleotide polymorphism: A major contributor to genetic variation in Arabidopsis"
+  authors:
+    - "Du J"
+    - "Gu T"
+    - "Tian H"
+    - "Araki H"
+    - "Yang YH"
+    - "Tian D"
+  publisher: "Gene"
+  date: "2008-01-01"
+  type: journal-article
+
+- id: manual-ding-2007-unique-pattern
+  title: "Unique pattern of R-gene variation within populations in Arabidopsis"
+  authors:
+    - "Ding J"
+    - "Zhang W"
+    - "Jing Z"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "Mol Genet Genomics"
+  date: "2007-01-01"
+  type: journal-article
+
+- id: manual-yang-2007-molecular-isolation
+  title: "A molecular isolation mechanism associated with high intra-specific diversity in rice"
+  authors:
+    - "Yang S"
+    - "Jiang K"
+    - "Araki H"
+    - "Ding J"
+    - "Yang Y"
+    - "Tian D"
+  publisher: "Gene"
+  date: "2007-01-01"
+  type: journal-article
+
+- id: manual-ding-2007-contrasting-patterns
+  title: "Contrasting patterns of evolution between allelic groups at a single locus in Arabidopsis"
+  authors:
+    - "Ding J"
+    - "Araki H"
+    - "Wang Q"
+    - "Zhang P"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "Genetica"
+  date: "2007-01-01"
+  type: journal-article
+
+- id: manual-ding-2007-highly-asymmetric
+  title: "Highly asymmetric rice genomes"
+  authors:
+    - "Ding J"
+    - "Araki H"
+    - "Wang Q"
+    - "Zhang P"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "BMC Genomics"
+  date: "2007-01-01"
+  type: journal-article
+
+- id: manual-jiang-2007-pattern-lrr
+  title: "Pattern of LRR nucleotide variation in plant resistance genes"
+  authors:
+    - "Jiang H"
+    - "Wang C"
+    - "Ping L"
+    - "Tian D"
+    - "Yang S"
+  publisher: "Plant Science"
+  date: "2007-01-01"
+  type: journal-article
+
+- id: manual-yang-2006-genome-wide-investigation
+  title: "Genome-wide investigation on the genetic variations of rice disease resistance genes"
+  authors:
+    - "Yang S"
+    - "Feng Z"
+    - "Zhang X"
+    - "Jiang K"
+    - "Jin X"
+    - "Hang Y"
+    - "Chen JQ"
+    - "Tian D"
+  publisher: "Plant Mol Biol"
+  date: "2006-01-01"
+  type: journal-article
+
+- id: manual-zhou-2004-genome-wide-identification
+  title: "Genome-wide identification of NBS genes in rice reveals significant expansion of divergent non-TIR NBS Genes"
+  authors:
+    - "Zhou T"
+    - "Wang Y"
+    - "Chen JQ"
+    - "Araki H"
+    - "Jing Z"
+    - "Jiang K"
+    - "Shen J"
+    - "Tian D"
+  publisher: "Mol Genet Genomics"
+  date: "2004-01-01"
+  type: journal-article
+
+- id: manual-tian-2002-dna-transfer
+  title: "DNA transfer by highly asymmetric somatic hybridisation in Medicago truncatula x Medicago rugosa and Medicago truncatula x Medicago scutellata"
+  authors:
+    - "Tian D"
+    - "Niu C"
+    - "Rose R"
+  publisher: "Theo Appl Genet"
+  date: "2002-01-01"
+  type: journal-article
+
+- id: manual-tian-1999-plant-regeneration
+  title: "Plant regeneration of asymmetric somatic hybrids between annual Medicago truncatula and Medicago scutellata"
+  authors:
+    - "Tian D"
+    - "Rose R"
+  publisher: "Plant Cell Report"
+  date: "1999-01-01"
+  type: journal-article
+
+- id: manual-tian-1994-hybrid-rice-cultivation
+  title: "杂交水稻制种高产栽培技术"
+  authors:
+    - "Tian D"
+  publisher: "四川科技出版社"
+  date: "1994-01-01"
+  type: book # Assuming this is a book
+
+- id: manual-tian-1991-rice-cross-breeding
+  title: "水稻异交栽培学"
+  authors:
+    - "Tian D"
+  publisher: "四川科技出版社"
+  date: "1991-01-01"
+  type: book # Assuming this is a book

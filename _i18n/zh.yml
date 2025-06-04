@@ -31,6 +31,10 @@ research:
 team:
   title: 团队
   tooltip: 我们的团队
+  Group_members: 团队成员
+  Graduate_students: 研究生
+  Undergraduate_students: 本科生
+  Former_Members: 已毕业成员
 
 site_config:
   subtitle: 南京大学生命科学学院

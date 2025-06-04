@@ -49,3 +49,24 @@ button {
 .button[data-flip] {
   flex-direction: row-reverse;
 }
+
+
+
+/* _styles/button.scss */
+
+.button-expanded-content {
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 8px;
+  border-radius: 3px;
+  color: var(--text); /* 确保文本颜色与主题匹配 */
+  white-space: nowrap; /* 防止文本换行 */
+  font-size: 0.9em; /* 可以调整字体大小 */
+  vertical-align: middle; /* 垂直对齐 */
+}
+
+/* 深色模式下的调整 */
+[data-dark="true"] .button-expanded-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--text-dark); /* 深色模式下的文本颜色 */
+}

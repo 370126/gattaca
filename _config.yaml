@@ -29,19 +29,32 @@ defaults:
       type: "members"
     values:
       layout: member
+  - scope:
+      type: "members_zh"
+    values:
+      layout: member
   # markdown files in /_posts
   - scope:
       type: "posts"
     values:
       layout: post
+  - scope:
+      type: "former_members"
+    values:
+      layout: member
 
 collections:
   # generate page for each member
   members:
     output: true
+  members_zh:
+    output: true
   # generate page for each post
   posts:
     output: true
+  former_members:
+    output: false # doNOT generate page for former members
+
 
 # jekyll plugins
 plugins:
@@ -85,4 +98,4 @@ exclude_from_localizations:
   - _layouts # 如果 _layouts 目录下的文件不需要翻译
   - _cite
   - _plugins
-  - _members
+  # - _members

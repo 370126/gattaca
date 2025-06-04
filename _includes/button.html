@@ -1,11 +1,28 @@
+
 {% assign button = include %}
 {% assign button = button | hash_default: site.data.types[include.type] %}
 
 {% if button.link or button.icon or button.text %}
   <div class="button-wrapper">
+    {% assign is_phone_or_email_type = false %}
+    {% if include.type == "phone" or include.type == "email" %}
+      {% assign is_phone_or_email_type = true %}
+    {% endif %}
+
     <a
       class="button"
-      href="{{ button.link | replace: "$LINK", button.link | relative_url }}"
+      
+      {% if is_phone_or_email_type %}
+        
+        role="button"
+        tabindex="0"
+      {% else %}
+        
+        
+        href="{{ button.link | replace: "$LINK", button.link | relative_url }}"
+      {% endif %}
+      
+      
       {% if button.tooltip %}
         data-tooltip="{{ button.tooltip | xml_escape }}"
       {% endif %}
@@ -20,5 +37,14 @@
         <span>{{ button.text }}</span>
       {% endif %}
     </a>
+
+    
+    {% if is_phone_or_email_type %}
+      <span class="button-displayed-link-content">
+        
+        {{ button.link | remove: "tel:" | remove: "mailto:" }}
+      </span>
+    {% endif %}
+
   </div>
 {% endif %}

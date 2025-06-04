@@ -8,7 +8,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 ## {% t research.highlighted %}
 
-{% include citation.html lookup="Constructing knowledge graphs and their biomedical applications" style="rich" %}
+{% include citation.html lookup="Re-evaluating evidence for adaptive mutation rate variation" style="rich" %}
 
 {% include section.html %}
 

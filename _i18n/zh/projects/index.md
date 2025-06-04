@@ -1,8 +1,7 @@
 
 # {% include icon.html icon="fa-solid fa-wrench" %} {% t projects.title %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+占位置的文字。
 
 {% include tags.html tags="publication, resource, website" %}
 

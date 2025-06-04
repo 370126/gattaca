@@ -31,6 +31,11 @@ research:
 team:
   title: Team
   tooltip: Meet our team
+  Group_members: Group Members
+  Graduate_students: Graduate Students
+  Undergraduate_students: Undergraduate Students
+  Former_Members: Former Members
+
 
 site_config:
   subtitle: School of Life Sciences, Nanjing University

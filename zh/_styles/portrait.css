@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .portrait-wrapper {
   display: contents;
 }
@@ -74,33 +73,26 @@
   display: none;
 }
 
-/* --- Principal Investigator (PI) 专属样式 --- */
-.portrait-wrapper[data-role=principal-investigator] {
-  /* 让整个 PI 肖像卡片稍大一些 */
-  /* 让 PI 的头像图片边框变成方的，并添加边框 */
-  /* 可选：如果 PI 图标的默认位置因图片大小变化而需要调整 */
-  /* 确保在不同尺寸样式下也应用 PI 样式 */
-}
 .portrait-wrapper[data-role=principal-investigator] .portrait {
-  width: 250px; /* 增大宽度，原为 175px */
-  margin: 25px; /* 调整外边距以适应新宽度，保持间距 */
+  width: 250px;
+  margin: 25px;
 }
 .portrait-wrapper[data-role=principal-investigator] .portrait-image {
-  border-radius: 10px; /* 较小的圆角，使其看起来是方的 */
-  border: 3px solid var(--primary, #007bff); /* 添加边框，颜色可自定义 */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* 增加阴影，使其更突出 */
+  border-radius: 10px;
+  border: 3px solid var(--primary, #007bff);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 .portrait-wrapper[data-role=principal-investigator] .portrait .icon {
-  transform: translate(10%, 10%); /* 微调图标位置 */
+  transform: translate(10%, 10%);
 }
 .portrait-wrapper[data-role=principal-investigator] .portrait[data-style=small] {
-  width: 120px; /* 如果 PI 小尺寸也要比普通小尺寸大 */
+  width: 120px;
 }
 .portrait-wrapper[data-role=principal-investigator] .portrait[data-style=small] .portrait-image {
   border-radius: 5px;
 }
 .portrait-wrapper[data-role=principal-investigator] .portrait[data-style=tiny] .portrait-image {
-  border-radius: 5px; /* 确保小尺寸下 PI 图片也是方的 */
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=portrait.css.map */

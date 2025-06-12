@@ -14,6 +14,24 @@
 
 
 
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
 
 
 
@@ -43,25 +61,25 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Team | GATTACA Lab</title>
+<title>GATTACA Lab</title>
 
-<link rel="icon" href="/gattaca/images/icon.png">
+<link rel="icon" href="/gattacaimages/icon.png"> 
 
-<meta name="title" content="Team">
-<meta name="description" content="School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.">
+<meta name="title" content="team.title">
+<meta name="description" content="">
 
-<meta property="og:title" content="Team">
+<meta property="og:title" content="team.title">
 <meta property="og:site_title" content="GATTACA Lab">
-<meta property="og:description" content="School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.">
+<meta property="og:description" content="">
 <meta property="og:url" content="https://370126.github.io/gattaca">
-<meta property="og:image" content="/gattaca/images/share.jpg">
-<meta property="og:locale" content="en_US">
+<meta property="og:image" content="/gattacaimages/share.jpg"> 
+<meta property="og:locale" content="en_EN">
 
-<meta property="twitter:title" content="Team">
-<meta property="twitter:description" content="School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.">
+<meta property="twitter:title" content="team.title">
+<meta property="twitter:description" content="">
 <meta property="twitter:url" content="https://370126.github.io/gattaca">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="/gattaca/images/share.jpg">
+<meta property="twitter:image" content="/gattacaimages/share.jpg"> 
 
 
   <meta property="og:type" content="website">
@@ -73,19 +91,18 @@
     
       "@type": "WebSite",
     
-    "name": "Team",
-    "description": "School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU&apos;s Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.",
-    "headline": "Team",
+    "name": "team.title",
+    "description": "",
+    "headline": "team.title",
     "publisher": {
       "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "/gattaca/images/icon.png" }
+      "logo": { "@type": "ImageObject", "url": "/gattacaimages/icon.png" } 
     },
     "url": "https://370126.github.io/gattaca"
   }
 </script>
 
 <link rel="alternate" type="application/rss+xml" href="https://370126.github.io/gattaca/feed.xml">
-
   <!-- Google Fonts -->
 <!-- automatically get url from fonts used in theme file -->
 
@@ -359,7 +376,13 @@
 
   <script src="/gattaca/_scripts/dark-mode.js"></script>
 
+  <script src="/gattaca/_scripts/dist/header-canvas.dev.js"></script>
+
+  <script src="/gattaca/_scripts/dist/header-interaction.dev.js"></script>
+
   <script src="/gattaca/_scripts/fetch-tags.js"></script>
+
+  <script src="/gattaca/_scripts/header-canvas.js"></script>
 
   <script src="/gattaca/_scripts/search.js"></script>
 
@@ -381,8 +404,10 @@
 
 
 
-<header class="background" style="--image: url('/gattaca/images/background_ori.jpg')" data-dark="true">
-  <a href="/gattaca/" class="home">
+<header class="background" style="--image: url('/gattacaimages/background_ori.jpg')" data-dark="true">
+<div class="header-background"></div>
+<canvas id="header-canvas"></canvas>
+  <a href="/gattaca/" class="home"> 
     
       <span class="logo">
         
@@ -416,12 +441,12 @@
       </span>
     
     
-      <span class="title-text" data-tooltip="Home">
+      <span class="title-text" data-tooltip="Home"> 
+         
+          <span class="title">GATTACA Lab</span> 
         
-          <span class="title">GATTACA Lab</span>
-        
-        
-          <span class="subtitle">School of Life Sciences, Nanjing University</span>
+         
+          <span class="subtitle">School of Life Sciences, Nanjing University</span> 
         
       </span>
     
@@ -439,32 +464,39 @@
       
     
       
-        <a href="/gattaca/projects/" data-tooltip="Software, datasets, and more">
+        <a href="/gattaca/projects/" data-tooltip="Explore our projects">
           Projects
         </a>
       
     
       
-        <a href="/gattaca/team/" data-tooltip="About our team">
+        <a href="/gattaca/team/" data-tooltip="Meet our team">
           Team
         </a>
       
     
       
-        <a href="/gattaca/blog/" data-tooltip="Musings and miscellany">
+        <a href="/gattaca/blog/" data-tooltip="Read our latest updates">
           Blog
         </a>
       
     
       
-        <a href="/gattaca/contact/" data-tooltip="Email, address, and location">
-          Contact
+        <a href="/gattaca/contact/" data-tooltip="Get in touch with us">
+          Contact Us
         </a>
       
     
+
+    
+    <div class="language-switcher">
+      
+        
+        <a href="/gattaca/zh/team/" class="lang-button">中文</a>
+      
+    </div>
   </nav>
 </header>
-
     <main>
       <!--
   modify main content of page:
@@ -483,12 +515,12 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="team">
-<i class="icon fa-solid fa-users"></i>Team</h1>
+    <h1 id="-team">
+<i class="icon fa-solid fa-users"></i> Team</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 123</p>
   </section>
 
   
@@ -502,51 +534,223 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p
   <size></size>
 -->
 
-<div class="portrait-wrapper">
-  <a href="/gattaca/members/jane-smith.html" class="portrait" data-style="" aria-label="Jane Smith">
+<div class="portrait-wrapper" data-role="principal-investigator">
+  <a href="/gattaca/members/DachengTian.html" class="portrait" data-style="" aria-label="Dacheng Tian">
     
       <i class="icon fa-solid fa-microscope"></i>
     
 
-    <img src="/gattaca/images/photo.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+    <img src="/gattaca/images/members/Dtian.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
 
     
       <span class="portrait-name">
-        Jane Smith
+        Dacheng Tian
       </span>
     
 
     
       <span class="portrait-description">
-        Principal Investigator
+        Professor of Biology
       </span>
     
 
-    
-      <span class="portrait-affiliation">
-        University of Colorado
-      </span>
     
   </a>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/gattaca/members/john-doe.html" class="portrait" data-style="" aria-label="John Doe">
+<div class="portrait-wrapper" data-role="principal-investigator">
+  <a href="/gattaca/members/JianqunChen.html" class="portrait" data-style="" aria-label="Jianqun Chen">
+    
+      <i class="icon fa-solid fa-microscope"></i>
+    
+
+    <img src="/gattaca/images/members/cjq.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Jianqun Chen
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Professor of Biology
+      </span>
+    
+
+    
+  </a>
+</div>
+
+<div class="portrait-wrapper" data-role="principal-investigator">
+  <a href="/gattaca/members/SihaiYang.html" class="portrait" data-style="" aria-label="Sihai Yang">
+    
+      <i class="icon fa-solid fa-microscope"></i>
+    
+
+    <img src="/gattaca/images/members/ysh.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Sihai Yang
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Professor of Biology
+      </span>
+    
+
+    
+  </a>
+</div>
+
+<p><br></p>
+
+<h2 id="group-members">Group Members</h2>
+
+<div class="portrait-wrapper" data-role="faculty">
+  <a href="/gattaca/members/HuangJu.html" class="portrait" data-style="" aria-label="Huang Ju">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    <img src="/gattaca/images/members/hj.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Huang Ju
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Associate professor
+      </span>
+    
+
+    
+  </a>
+</div>
+
+<div class="portrait-wrapper" data-role="faculty">
+  <a href="/gattaca/members/WangLong.html" class="portrait" data-style="" aria-label="Wang Long">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    <img src="/gattaca/images/members/wl.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Wang Long
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Professor
+      </span>
+    
+
+    
+  </a>
+</div>
+
+<div class="portrait-wrapper" data-role="faculty">
+  <a href="/gattaca/members/ZhangXiaohui.html" class="portrait" data-style="" aria-label="Zhang Xiaohui">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    <img src="/gattaca/images/members/zxh.bmp" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Zhang Xiaohui
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Senior engineer
+      </span>
+    
+
+    
+  </a>
+</div>
+
+<div class="portrait-wrapper" data-role="faculty">
+  <a href="/gattaca/members/brian.html" class="portrait" data-style="" aria-label="Brian Traw">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    <img src="/gattaca/images/members/brian.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Brian Traw
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Professor
+      </span>
+    
+
+    
+  </a>
+</div>
+
+<div class="portrait-wrapper" data-role="postdoc">
+  <a href="/gattaca/members/ZhaoXue.html" class="portrait" data-style="" aria-label="Zhao Xue">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    <img src="/gattaca/images/members/zx.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Zhao Xue
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Postdoctoral Researcher
+      </span>
+    
+
+    
+  </a>
+</div>
+
+<p><br></p>
+
+<h2 id="graduate-students">Graduate Students</h2>
+
+<div class="portrait-wrapper" data-role="phd">
+  <a href="/gattaca/members/WangWenjing.html" class="portrait" data-style="" aria-label="Wang Wenjing">
     
       <i class="icon fa-solid fa-graduation-cap"></i>
     
 
-    <img src="/gattaca/images/photo.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+    <img src="/gattaca/images/members/wwj.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
 
     
       <span class="portrait-name">
-        John Doe
+        Wang Wenjing
       </span>
     
 
     
       <span class="portrait-description">
-        PhD Student
+        Doctor
       </span>
     
 
@@ -554,23 +758,27 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p
   </a>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/gattaca/members/sarah-johnson.html" class="portrait" data-style="" aria-label="Sarah Johnson">
+<p><br></p>
+
+<h2 id="undergraduate-students">Undergraduate Students</h2>
+
+<div class="portrait-wrapper" data-role="undergrad">
+  <a href="/gattaca/members/Ding.html" class="portrait" data-style="" aria-label="Ding">
     
-      <i class="icon fa-solid fa-code"></i>
+      <i class="icon fa-solid fa-user-graduate"></i>
     
 
-    <img src="/gattaca/images/photo.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+    <img src="/gattaca/images/members/Ding.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
 
     
       <span class="portrait-name">
-        Sarah Johnson
+        Ding
       </span>
     
 
     
       <span class="portrait-description">
-        Lead Programmer
+        little white cabbage
       </span>
     
 
@@ -578,91 +786,31 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p
   </a>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/gattaca/members/tim-member.html" class="portrait" data-style="" aria-label="Tim Member">
-    
-      <i class="icon fa-solid fa-code"></i>
+<p><br></p>
+<hr class="subtle-divider">
+
+<h1 id="former-members">Former Members</h1>
+
+<div class="portrait-wrapper" data-role="">
+  <a href="/gattaca/former_members/LiJinpeng.html" class="portrait" data-style="small" aria-label="Li Jinpeng">
     
 
-    <img src="/gattaca/images/team/some-image.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
+    <img src="/gattaca/images/members/ljp.bmp" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
 
     
       <span class="portrait-name">
-        Tim Member
+        Li Jinpeng
       </span>
     
 
     
       <span class="portrait-description">
-        Senior Programmer
+        rocljp@gmail.com
       </span>
     
 
     
   </a>
-</div>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="2" data-dark="true" style="--image: url('/gattaca/images/background.jpg')">
-    <!--
-  <background>images/background.jpg</background>
-  <dark>true</dark>
-  <size>2</size>
--->
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<div class="grid" data-style="square">
-  
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/gattaca/images/photo.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
-
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/gattaca/images/photo.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
-
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/gattaca/images/photo.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
-
-
 </div>
   </section>
 
@@ -680,45 +828,65 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p
 
   <div>
     
+    
       
       
-      
+
 
 
 
   <div class="button-wrapper">
-    <a class="button" href="tel:025-89686406" data-tooltip="Phone number" data-style="bare" aria-label="Phone number">
+    
+    
+
+    <a class="button" role="button" tabindex="0" data-tooltip="Phone number" data-style="bare" aria-label="Phone number">
       <i class="icon fa-solid fa-phone"></i>
       
     </a>
-  </div>
-
 
     
+    
+      <span class="button-displayed-link-content">
+        
+        025-89686406
+      </span>
+    
+
+  </div>
+
+        
+    
       
-      
-      
+
 
 
 
   <div class="button-wrapper">
-    <a class="button" href="/gattaca/Life%20Science%20Building%20B417-420,%20Nanjing%20University%20Xianlin%20Campus" data-tooltip="Address" data-style="bare" aria-label="Address">
+    
+    
+
+    <a class="button" href="http://api.map.baidu.com/place/detail?uid=7b259e1c19ce6dff5cd4fea1&output=html&src=webapp.baidu.openAPIdemo" data-tooltip="Address" data-style="bare" aria-label="Address">
       <i class="icon fa-solid fa-map-location-dot"></i>
       
     </a>
-  </div>
-
 
     
+    
+
+  </div>
+<br>
+    
+
+    
+      <span>Life Science Building B417-420, Nanjing University Xianlin Campus</span><br>
+    
+
   </div>
 
   <div>
     © 2025
     GATTACA Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
+    
   </div>
 
   <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">

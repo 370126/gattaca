@@ -14,6 +14,24 @@
 
 
 
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
 
 
 
@@ -43,25 +61,25 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Projects | GATTACA Lab</title>
+<title>GATTACA Lab</title>
 
-<link rel="icon" href="/gattaca/images/icon.png">
+<link rel="icon" href="/gattacaimages/icon.png"> 
 
-<meta name="title" content="Projects">
-<meta name="description" content="School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.">
+<meta name="title" content="projects.title">
+<meta name="description" content="">
 
-<meta property="og:title" content="Projects">
+<meta property="og:title" content="projects.title">
 <meta property="og:site_title" content="GATTACA Lab">
-<meta property="og:description" content="School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.">
+<meta property="og:description" content="">
 <meta property="og:url" content="https://370126.github.io/gattaca">
-<meta property="og:image" content="/gattaca/images/share.jpg">
-<meta property="og:locale" content="en_US">
+<meta property="og:image" content="/gattacaimages/share.jpg"> 
+<meta property="og:locale" content="en_EN">
 
-<meta property="twitter:title" content="Projects">
-<meta property="twitter:description" content="School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU's Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.">
+<meta property="twitter:title" content="projects.title">
+<meta property="twitter:description" content="">
 <meta property="twitter:url" content="https://370126.github.io/gattaca">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="/gattaca/images/share.jpg">
+<meta property="twitter:image" content="/gattacaimages/share.jpg"> 
 
 
   <meta property="og:type" content="website">
@@ -73,19 +91,18 @@
     
       "@type": "WebSite",
     
-    "name": "Projects",
-    "description": "School of Life Sciences, Nanjing University. The Gattaca Laboratory was founded in 2003 by Prof. Dacheng Tian and Prof. Jianqun Chen, growing out of the work of NJU&apos;s Molecule Biology and Ecology Group, and building on the seminal work of faculty members in a range of other disciplines, from bioinformatics and computer science.",
-    "headline": "Projects",
+    "name": "projects.title",
+    "description": "",
+    "headline": "projects.title",
     "publisher": {
       "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "/gattaca/images/icon.png" }
+      "logo": { "@type": "ImageObject", "url": "/gattacaimages/icon.png" } 
     },
     "url": "https://370126.github.io/gattaca"
   }
 </script>
 
 <link rel="alternate" type="application/rss+xml" href="https://370126.github.io/gattaca/feed.xml">
-
   <!-- Google Fonts -->
 <!-- automatically get url from fonts used in theme file -->
 
@@ -359,7 +376,13 @@
 
   <script src="/gattaca/_scripts/dark-mode.js"></script>
 
+  <script src="/gattaca/_scripts/dist/header-canvas.dev.js"></script>
+
+  <script src="/gattaca/_scripts/dist/header-interaction.dev.js"></script>
+
   <script src="/gattaca/_scripts/fetch-tags.js"></script>
+
+  <script src="/gattaca/_scripts/header-canvas.js"></script>
 
   <script src="/gattaca/_scripts/search.js"></script>
 
@@ -381,8 +404,10 @@
 
 
 
-<header class="background" style="--image: url('/gattaca/images/background_ori.jpg')" data-dark="true">
-  <a href="/gattaca/" class="home">
+<header class="background" style="--image: url('/gattacaimages/background_ori.jpg')" data-dark="true">
+<div class="header-background"></div>
+<canvas id="header-canvas"></canvas>
+  <a href="/gattaca/" class="home"> 
     
       <span class="logo">
         
@@ -416,12 +441,12 @@
       </span>
     
     
-      <span class="title-text" data-tooltip="Home">
+      <span class="title-text" data-tooltip="Home"> 
+         
+          <span class="title">GATTACA Lab</span> 
         
-          <span class="title">GATTACA Lab</span>
-        
-        
-          <span class="subtitle">School of Life Sciences, Nanjing University</span>
+         
+          <span class="subtitle">School of Life Sciences, Nanjing University</span> 
         
       </span>
     
@@ -439,32 +464,39 @@
       
     
       
-        <a href="/gattaca/projects/" data-tooltip="Software, datasets, and more">
+        <a href="/gattaca/projects/" data-tooltip="Explore our projects">
           Projects
         </a>
       
     
       
-        <a href="/gattaca/team/" data-tooltip="About our team">
+        <a href="/gattaca/team/" data-tooltip="Meet our team">
           Team
         </a>
       
     
       
-        <a href="/gattaca/blog/" data-tooltip="Musings and miscellany">
+        <a href="/gattaca/blog/" data-tooltip="Read our latest updates">
           Blog
         </a>
       
     
       
-        <a href="/gattaca/contact/" data-tooltip="Email, address, and location">
-          Contact
+        <a href="/gattaca/contact/" data-tooltip="Get in touch with us">
+          Contact Us
         </a>
       
     
+
+    
+    <div class="language-switcher">
+      
+        
+        <a href="/gattaca/zh/projects/" class="lang-button">中文</a>
+      
+    </div>
   </nav>
 </header>
-
     <main>
       <!--
   modify main content of page:
@@ -483,8 +515,8 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="projects">
-<i class="icon fa-solid fa-wrench"></i>Projects</h1>
+    <h1 id="-projects">
+<i class="icon fa-solid fa-wrench"></i> Projects</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -530,46 +562,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     
       <a href="https://github.com/" class="card-title">
         Cool Dataset
-    </a>
-    
-
-    
-      <span class="card-subtitle">a subtitle</span>
-    
-
-    
-      <p>
-        Lorem ipsum <em>dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-      </p>
-    
-
-    
-      
-
-
-  <div class="tags" data-repo="greenelab/lab-website-template" data-link="/gattaca/projects/">
-    
-      <a href="/projects/?search=%22tag:%20resource%22" class="tag" data-tooltip='Show items with the tag "resource"'>
-        resource
-      </a>
-    
-  </div>
-
-
-    
-  </div>
-</div>
-
-<div class="card" data-style="">
-  <a href="https://github.com/" aria-label="Cool Package" class="card-image">
-    <img src="/gattaca/images/photo.jpg" alt="Cool Package" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
-  </a>
-
-  <div class="card-text">
-    
-      <a href="https://github.com/" class="card-title">
-        Cool Package
     </a>
     
 
@@ -658,86 +650,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     
   </div>
 </div>
-
-<div class="card" data-style="small">
-  <a href="https://github.com/" aria-label="Cool Web App" class="card-image">
-    <img src="/gattaca/images/photo.jpg" alt="Cool Web App" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
-  </a>
-
-  <div class="card-text">
-    
-      <a href="https://github.com/" class="card-title">
-        Cool Web App
-    </a>
-    
-
-    
-      <span class="card-subtitle">a subtitle</span>
-    
-
-    
-      <p>
-        Lorem ipsum <em>dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-      </p>
-    
-
-    
-      
-
-
-  <div class="tags" data-repo="greenelab/lab-website-template" data-link="/gattaca/projects/">
-    
-      <a href="/projects/?search=%22tag:%20software%22" class="tag" data-tooltip='Show items with the tag "software"'>
-        software
-      </a>
-    
-  </div>
-
-
-    
-  </div>
-</div>
-
-<div class="card" data-style="small">
-  <a href="https://github.com/" aria-label="Cool Web Server" class="card-image">
-    <img src="/gattaca/images/photo.jpg" alt="Cool Web Server" loading="lazy" onerror="this.src = '/gattaca/images/fallback.svg'; this.onerror = null;">
-  </a>
-
-  <div class="card-text">
-    
-      <a href="https://github.com/" class="card-title">
-        Cool Web Server
-    </a>
-    
-
-    
-      <span class="card-subtitle">a subtitle</span>
-    
-
-    
-      <p>
-        Lorem ipsum <em>dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-      </p>
-    
-
-    
-      
-
-
-  <div class="tags" data-repo="greenelab/lab-website-template" data-link="/gattaca/projects/">
-    
-      <a href="/projects/?search=%22tag:%20software%22" class="tag" data-tooltip='Show items with the tag "software"'>
-        software
-      </a>
-    
-  </div>
-
-
-    
-  </div>
-</div>
   </section>
 
 
@@ -754,45 +666,65 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
   <div>
     
+    
       
       
-      
+
 
 
 
   <div class="button-wrapper">
-    <a class="button" href="tel:025-89686406" data-tooltip="Phone number" data-style="bare" aria-label="Phone number">
+    
+    
+
+    <a class="button" role="button" tabindex="0" data-tooltip="Phone number" data-style="bare" aria-label="Phone number">
       <i class="icon fa-solid fa-phone"></i>
       
     </a>
-  </div>
-
 
     
+    
+      <span class="button-displayed-link-content">
+        
+        025-89686406
+      </span>
+    
+
+  </div>
+
+        
+    
       
-      
-      
+
 
 
 
   <div class="button-wrapper">
-    <a class="button" href="/gattaca/Life%20Science%20Building%20B417-420,%20Nanjing%20University%20Xianlin%20Campus" data-tooltip="Address" data-style="bare" aria-label="Address">
+    
+    
+
+    <a class="button" href="http://api.map.baidu.com/place/detail?uid=7b259e1c19ce6dff5cd4fea1&output=html&src=webapp.baidu.openAPIdemo" data-tooltip="Address" data-style="bare" aria-label="Address">
       <i class="icon fa-solid fa-map-location-dot"></i>
       
     </a>
-  </div>
-
 
     
+    
+
+  </div>
+<br>
+    
+
+    
+      <span>Life Science Building B417-420, Nanjing University Xianlin Campus</span><br>
+    
+
   </div>
 
   <div>
     © 2025
     GATTACA Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
+    
   </div>
 
   <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">

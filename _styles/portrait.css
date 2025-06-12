@@ -73,26 +73,4 @@
   display: none;
 }
 
-.portrait-wrapper[data-role=principal-investigator] .portrait {
-  width: 250px;
-  margin: 25px;
-}
-.portrait-wrapper[data-role=principal-investigator] .portrait-image {
-  border-radius: 10px;
-  border: 3px solid var(--primary, #007bff);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-}
-.portrait-wrapper[data-role=principal-investigator] .portrait .icon {
-  transform: translate(10%, 10%);
-}
-.portrait-wrapper[data-role=principal-investigator] .portrait[data-style=small] {
-  width: 120px;
-}
-.portrait-wrapper[data-role=principal-investigator] .portrait[data-style=small] .portrait-image {
-  border-radius: 5px;
-}
-.portrait-wrapper[data-role=principal-investigator] .portrait[data-style=tiny] .portrait-image {
-  border-radius: 5px;
-}
-
 /*# sourceMappingURL=portrait.css.map */

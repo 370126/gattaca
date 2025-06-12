@@ -5,6 +5,6 @@
 
   # 370126's Website
 
-  Visit **[370126.github.io/lab-website](https://370126.github.io/lab-website)** 🚀
+  Visit **[370126.github.io/gattaca](https://370126.github.io/gattaca)** 🚀
 
   _Built with [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)_
